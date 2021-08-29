@@ -33,6 +33,8 @@ for n in range(len(ytbShortLink)):
 """
 
 
+
+
 def downloadPlaylistVideo(url):
     #youtube-dl --max-filesize 50M <playlist_url>
     print("download Video only from playlist")
@@ -45,14 +47,15 @@ def downloadPlaylistAudio(url):
 
 def downloadAudio(url):
     #youtube-dl -x https://www.youtube.com/watch?v=7E-cwdnsiow
+    
     print("downloading Audio")
-    subprocess.run(['youtube-dl', '-x',url], stdout=subprocess.PIPE)  
+    subprocess.run(['youtube-dl',"-o", "/home/mercy/Music/%(title)s.%(ext)s", '-x',url], stdout=subprocess.PIPE)  
 
 
 def downloadVideo(url):
     #youtube-dl -f 22 https://www.youtube.com/watch?v=7E-cwdnsiow
     print("downloading Video")
-    subprocess.run(['youtube-dl', '-f','22',url], stdout=subprocess.PIPE)  
+    subprocess.run(['youtube-dl',"-o", "/home/mercy/Videos/%(title)s.%(ext)s", '--max-filesize','50M',url], stdout=subprocess.PIPE)  
 
 
 
