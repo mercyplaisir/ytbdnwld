@@ -56,6 +56,15 @@ def downloadVideo(url):
 
 
 
+def ChooseType():
+    response=[1,2]
+    try:
+        decision = int(input("entrez \"1\" pour Video OU \"2\" pour AUDIO : "))
+        assert decision in response
+        return decision
+    except Exception as e:
+        ChooseType()
+
 
 
 
@@ -68,10 +77,8 @@ else:
     print("c'est une video\n")
     isPlaylist=False
 
-try:
-    decision = int(input("entrez \"1\" pour Video OU \"2\" pour AUDIO : "))
-except Exception as e:
-    print(e)
+decision = ChooseType()
+
 
 
 if decision==1 :
