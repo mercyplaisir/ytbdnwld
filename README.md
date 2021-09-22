@@ -11,3 +11,8 @@ Steps:
 
 
 Helps to download Youtube Videos easily in format wanted
+
+
+requirements:
+	-sudo apt install youtube-dl
+

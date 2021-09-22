@@ -72,7 +72,7 @@ def downloadAudio(url,destinationFolder = musicDestination):
     print(f"downloading Audio\n Stored to {folderDestination}")
 
 
-    os.system(f'youtube-dl -x --audio-format mp3 -o \"{folderDestination}/%(title)s.%(ext)s\" "{url}"')
+    os.system(f'youtube-dl -x --audio-format m4a -o \"{folderDestination}/%(title)s.%(ext)s\" "{url}"')
 
 
 def downloadVideo(url,destinationFolder = videoDestination):
